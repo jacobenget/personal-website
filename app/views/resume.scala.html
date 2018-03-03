@@ -1,0 +1,227 @@
+@(pageName: String)
+
+<div id="linkToDownloadResume">
+	<a class="boldMe" href="@routes.Assets.versioned("files/JacobEnget_Resume.pdf")">download resume</a>
+</div>
+<div id="resume">
+	<div id="titleBar">
+		<div id="resumeName">
+        	<img alt="" src="@routes.Assets.versioned("images/" + pageName + "/name.png")" />
+        </div>
+        <div id="resumeJobTitle">
+        	<img alt="" src="@routes.Assets.versioned("images/" + pageName + "/jobTitle.png")" />
+        </div>
+        <div id="resumeQuote">
+        	...with both the skills and the fire to get things done
+        </div>
+    </div>
+    <div class="resumeSection" id="professionalProfile">
+    	<div class="resumeSectionTitle">
+        	<img alt="" src="@routes.Assets.versioned("images/" + pageName + "/professionalProfile.png")" />
+        </div>
+        <div class="resumeSectionContent" id="profileText">
+        	<b>Passionate software engineer with 8+ years experience rocking it out in video game, mobile, and web application development.</b>  Strong software organization and design abilities combine with a proven commitment to deliver the correct software on time. Known for enthusiasm, infinite curiosity, and user advocacy. Highly values clear communication and a sense of team empowerment.
+        </div>
+    </div>
+    <div class="resumeSection" id="strengths">
+		<div><i>Strengths Include</i></div>
+		<div>
+			<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td><ul><li>Software Design and Organization</li></ul></td>
+					<td><ul><li>Eye For Pragmatic Solutions</li></ul></td>
+				</tr>
+				<tr>
+					<td><ul><li>API and GUI Design</li></ul></td>
+					<td><ul><li>Initiative to Learn</li></ul></td>
+				</tr>
+				<tr>
+					<td><ul><li>Technology Research and Evaluation</li></ul></td>
+					<td><ul><li>Getting Inside the User's Head</li></ul></td>
+				</tr>
+				<tr>
+					<td><ul><li>Requirements Gathering</li></ul></td>
+					<td><ul><li>Deep Love and Skill for Math</li></ul></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+    <div class="resumeSection" id="technicalSkills">
+    	<div class="resumeSectionTitle">
+        	<img alt="" src="@routes.Assets.versioned("images/" + pageName + "/technicalSkills.png")" />
+        </div>
+        <div class="resumeSectionContent" id="technicalSkillsText">
+        	<div class="technicalSkillsRow">
+            	<span class="skillGroup">Master:</span><span class="skills">C++, Qt, Visual Studio, Perforce, Rubik's Cubing</span>
+            </div>
+        	<div class="technicalSkillsRow">
+            	<span class="skillGroup">Proficient:</span><span class="skills">Java, Scala, JavaScript, HTML, Eclipse, π Memorization</span>
+            </div>    
+        	<div class="technicalSkillsRow">
+            	<span class="skillGroup">Competent:</span><span class="skills">Python, Lua, CSS, Play framework, OpenGL, jQuery, Improvisation</span>
+            </div> 
+        	<div class="technicalSkillsRow">
+            	<span class="skillGroup">Familiar:</span><span class="skills">Akka, AWS, Docker, sbt, Git, SQL, Lisp, Ruby, ActionScript, JSP, JBoss, Break-Dancing Poorly 
+</span>
+            </div>
+        </div>
+    </div>
+    <div class="resumeSection" id="gameDevelopmentExperience">
+    	<div class="resumeSectionTitle">
+        	<img alt="" src="@routes.Assets.versioned("images/" + pageName + "/professionalExperience.png")" />
+        </div>
+        <div class="resumeSectionContent" id="gameDevelopmentText">
+			<div class="company">
+				<div class="title">HAVOK  ∙  Dublin, Ireland</div>
+				<div class="details">
+					Leading provider of game development technologies with a core focus on physics simulation and computer graphics. Over 600 video game titles have been powered by Havok products.
+                </div>
+				<div class="position">
+					<div class="header">
+	                	<span class="title">Senior Software Engineer</span>
+	                    <span class="dates">May 2012 – Sep 2015</span>
+					</div>
+					<div class="details">
+						Engineered a general tools framework for Havok's core products from the ground up as part of a three person R&D team.  Mainly worked in C++ with Qt while emphasizing usability, flexibility, and performance to create a solid set of abstractions, graphical user interfaces, and data structures for empowering content creators.
+					</div>
+					<div class="subpoints">
+	                	<ul>
+	                    	<li>
+	                        	Led integration of scripting languages into our framework to provide easy automation, extensibility, and customization of our tools. Co-designed a generic binding layer to Lua, and single-handedly extended this layer to support Python in three weeks, despite having little previous knowledge of Python.
+	                        </li>
+	                        <li>
+	                        	Researched and developed an HTML/CSS/JavaScript prototype of our framework, using plugins to interact with our rendering infrastructure and to bind our core C++ logic to the browser's JavaScript environment. This R&D project achieved near parity with the original framework in just one month's development time.
+	                        </li>
+	                        <li>
+								Architected a generic and reusable graph-based API and GUI that was used to power a wide range of applications including render pipeline, particle effect, and visual scripting editors.  Along with being highly customizable these editors gracefully render over 10,000 GUI elements at once.
+							</li>
+	                        <li>
+								Devised a set of controls and widgets for users to intuitively move the camera and other objects in 3D space. Worked closely with in-house artists to achieve perfectly reactive and comfortable interactions.
+							</li>
+	                        <li>
+								Created a user interface for browsing and rendering a game project's assets. Utilized MVC concepts inherent in Qt to build a solution that supports split-second filtering of over 100,000 assets.
+							</li>
+	                    </ul>
+					</div>
+                </div>
+            </div>
+			<div class="company">
+				<div class="title">ID SOFTWARE  ∙  Dallas, TX</div>
+				<div class="details">
+					World-renowned game developer and technology innovator that created <i>Wolfenstein</i>, <i>Doom</i>, and <i>Quake</i>.
+                </div>
+				<div class="position">
+					<div class="header">
+	                	<span class="title">Tools Programmer</span>
+	                    <span class="dates">Nov 2009 – Apr 2012</span>
+					</div>
+					<div class="details">
+						Extended and maintained the C++/MFC based tools of our proprietary game engine, idTech5, emphasizing user education, productivity, and stability. Worked closely with over 150 Rage and Doom designers, artists, and programmers to address their unique needs in a timely fashion.
+					</div>
+					<div class="subpoints">
+	                	<ul>
+	                    	<li>
+	                        	Boosted the happiness and productivity of our designers by implementing an in-game method for editing and reloading individual game entities (removing the need to reload an entire level to test small changes), and by engineering a declarative programming language for customizing our level editor.
+	                        </li>
+	                        <li>
+	                        	Improved communication with our users by creating and regularly updating an internal blog broadcasting tool and pipeline related developments.
+	                        </li>
+	                        <li>
+								Overhauled our animation tree editor, adding animation preview features with a timeline and a GUI for creating custom blended animations. This gave animators and designers immediate feedback when constructing animated sequences, greatly saving time during development.
+							</li>
+	                    </ul>
+					</div>
+                </div>
+				<div class="position">
+					<div class="header">
+	                	<span class="title">Mobile Programmer</span>
+	                    <span class="dates">Dec 2008 – Nov 2009</span>
+					</div>
+					<div class="details">
+						Worked with a team of six to take Doom II RPG from concept to completion on multiple mobile platforms within 10 months. Maintained and improved a mobile game engine, including rendering and scripting systems, along with a Maya-based asset toolchain.
+					</div>
+					<div class="subpoints">
+	                	<ul>
+	                    	<li>
+	                        	Worked strategically to port the completed game from Java ME to C++/Brew in two weeks, one week less than predicted based on previous ports, despite it being my first port.
+	                        </li>
+	                        <li>
+	                        	Cut long-standing image memory requirements in half on the low-end version of the game, reducing total memory usage by 33% and allowing us to easily fit the game within the 300 KB memory limit.
+	                        </li>
+	                    </ul>
+					</div>
+                </div>
+            </div>
+			<div class="company">
+				<div class="title">TRAFFIC TECHNOLOGIES  ∙  Minneapolis, MN</div>
+				<div class="details">
+					Provides traffic and transportation system solutions to make the roadways safer and more efficient.
+                </div>
+				<div class="position">
+					<div class="header">
+	                	<span class="title">Software Engineer</span>
+	                    <span class="dates">Jan 2007 – Jun 2008</span>
+					</div>
+					<div class="details">
+						Initially hired as a part-time intern, but promoted to full-time Software Engineer after 5 months, a full year before my graduation date. Was part of a 4-person engineering team that designed and supported a traffic control system with a Java EE back end built with JBoss. This system monitored and controlled over 400 sensors, signs, and cameras remotely and was utilized by hundreds of DOT officials across the country.
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="resumeSection" id="education">
+    	<div class="resumeSectionTitle">
+        	<img alt="" src="@routes.Assets.versioned("images/" + pageName + "/professionalDevelopment.png")" />
+    	</div>
+        <div class="resumeSectionContent" id="educationText">
+        	<div class="educationEntry">
+            	<div class="specifics">
+            		<span class="name">Personal projects hosted at <a href="http://jacobenget.com">jacobenget.com</a></span>&nbsp;<span class="year">(2007-Present)</span>
+                </div>
+                <div class="extra">
+                	Website, including Doom asset browser, built in Scala using the Play Framework and hosted on AWS.
+                </div>
+            </div>
+        	<div class="educationEntry">
+            	<div class="specifics">
+            		<span class="name">Continuing Education</span>&nbsp;<span class="year">(2012-Present)</span>
+                </div>
+                <div class="extra">
+                	9 Computer Science and Math Courses completed via <a href="coursera.org">coursera.org</a>.
+                </div>
+            </div>
+        	<div class="educationEntry">
+            	<div class="specifics">
+            		<span class="name">CoderDojo</span>&nbsp;<span class="year">(2012-2013)</span>&nbsp;Dublin, Ireland
+                </div>
+                <div class="extra">
+                	Volunteered teaching children how to code and design video games.
+                </div>
+            </div>
+        	<div class="educationEntry">
+            	<div class="specifics">
+                    <span class="name">B.S., Computer Science</span>&nbsp;<span class="year">(2008)</span>&nbsp;
+                    University of Minnesota, Twin Cities, MN.
+                    (<i>Graduated with Honors</i>)
+                </div>
+                <div class="extra">
+                	Emphasis in <b>Computer Graphics and Software Engineering</b>.
+                </div>
+            </div>
+        	<div class="educationEntry">
+            	<div class="specifics">
+                    <span class="name">B.S., Mathematics</span>&nbsp;
+                    <span class="year">(2004)</span>&nbsp;
+                    North Dakota State University, Fargo, ND.
+                    (<i>Graduated with Honors</i>)
+                </div>
+                <div class="extra">
+                	studied abroad at the <b>Independent University of Moscow</b>, Russia, Fall 2002.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="resumeFooter">
+    	Minneapolis, MN&nbsp;&nbsp;&middot;&nbsp;&nbsp;(315) 869-5294&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="mailto:jacob.enget@@gmail.com">jacob.enget@@gmail.com</a>
+    </div>
+</div>

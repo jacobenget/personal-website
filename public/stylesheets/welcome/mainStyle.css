@@ -1,0 +1,16 @@
+
+div#aboutMe {
+	margin:35px;
+}
+
+div#aboutMe div.paragraph{
+	margin-bottom:2em;
+}
+
+div#aboutMe div.lastParagraph{
+	margin-bottom:0em;
+}
+
+div#aboutMe a {
+	text-decoration:underline;
+}

@@ -1,0 +1,33 @@
+div#contact {
+	padding:30px;
+	overflow:auto;
+}
+
+div#contact a {
+	text-decoration:underline;
+}
+
+div#contactHeader {
+	font-size:16px;
+	margin-bottom:30px;
+}
+
+div#contactText {
+	position:relative;
+	float:left;
+}
+
+div#whiteSpaceColumn {
+	position:relative;
+	width:150px;
+	float:left;
+}
+
+div#contactFormSection {
+	position:relative;
+	float:left;
+}
+
+div#hireMeSection {
+	margin-top:2em;
+}

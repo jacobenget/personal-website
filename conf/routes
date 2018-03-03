@@ -1,10 +1,26 @@
 # Routes
 # This file defines all application routes (Higher priority routes first)
-# https://www.playframework.com/documentation/latest/ScalaRouting
 # ~~~~
 
-# An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+# Home page
+GET     /                           controllers.Application.index
+
+# Sub pages
+GET     /welcome                    controllers.Application.welcome
+GET     /resume                     controllers.Application.resume
+GET     /demos                      controllers.Application.demos
+GET     /demos/doomwadreader        controllers.Application.demosDoomWadReader
+GET     /demos/3dmaze               controllers.Application.demos3DMaze
+GET     /demos/samurai              controllers.Application.demosSamurai
+GET     /demos/cycle3467            controllers.Application.demosCycle3467
+GET     /demos/extras               controllers.Application.demosExtras
+GET     /contact  	                controllers.Application.contact
+GET		/extractDoomWadData			controllers.Application.extractDoomWadDataFromUrl(url: String)
+POST	/extractDoomWadData			controllers.Application.extractDoomWadDataFromBinary
+
+# gave a shot at trying to stop a 404 error when playing the synthetic snow flash, which seems to have hard coded logic to try to load this mp3
+# failure to load seems to have no affect other than producing a 404 error to the browser (which the user won't see unless they are really looking for it)
+#GET		/demos/Over%20the%20Pond.mp3	controllers.Assets.versioned(path="/public", file="assets/flash/AlbumLeafOverThePond64.mp3")
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

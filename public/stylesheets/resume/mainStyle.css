@@ -1,0 +1,197 @@
+div#linkToDownloadResume {
+	text-align:right;
+	font-size:10px;
+	margin-right:30px;
+	padding-top:5px;
+}
+
+div#resume {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#000000;
+	margin: 10px 30px 30px 30px;
+}
+
+div#resume a.boldMe {
+	color:#000000;
+}
+
+div#resume a.boldMe:hover {
+	color:#444444;
+}
+
+div#resume img {
+	border:none;
+}
+
+div#titleBar {
+}
+
+div#resumeQuote {
+	margin:5px;
+}
+
+div.resumeSection {
+	padding-bottom:25px;
+}
+
+/* override the above setting because of extra spacing elsewhere */
+div.resumeSection#gameDevelopmentExperience {
+	padding-bottom:0px;
+}
+
+div#professionalProfile {
+	padding-top:5px;
+	padding-bottom:7px;
+}
+
+
+/**********************************************/
+
+div#resumeName {
+	padding-bottom:4px;
+	margin-bottom:4px;
+	border-bottom:solid;
+	border-bottom-width:1px;
+	border-bottom-color:#666666;
+}
+
+div#resumeJobTitle {
+	text-align:right;
+}
+
+div#resumeQuote {
+	text-align:right;
+	color:#666666;
+}
+
+
+/**********************************************/
+
+div#strengths {
+	text-align: center;
+}
+
+div#strengths table {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+div#strengths ul {
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+
+div#strengths li {
+	background-image: url(../../images/itemDot.gif);
+	background-repeat:no-repeat;
+	background-position: 0.2em .45em;
+	padding-left: 2.0em;
+	margin-top:5px;
+}
+
+/**********************************************/
+
+div.resumeSectionTitle {
+	padding-bottom:5px;
+}
+
+div.resumeSectionContent {
+	padding-left:2px;
+}
+
+
+/*********************************************/
+
+div.educationEntry {
+	padding-bottom:3px;
+}
+
+div.specifics {
+	position:relative;
+}
+
+span.name {
+	font-weight:bold;
+	font-size:1.1em;
+}
+
+span.year {
+	font-weight:bold;
+}
+
+div.extra {
+	padding-left:40px;
+}
+
+
+/*********************************************/
+
+div#technicalSkillsText {
+	position:relative;
+}
+
+span.skillGroup {
+	font-weight:bold;
+	font-size:1.1em;
+	width:120px;
+}
+
+span.skills {
+	position:absolute;
+	left:120px;
+}
+
+
+/**********************************************/
+
+div.resumeSectionContent .position .header {
+	position:relative;
+}
+
+div.resumeSectionContent .company .title {
+	font-weight:bold;
+	font-size:1.1em;
+}
+
+div.resumeSectionContent .dates {
+	position:absolute;
+	right:0px;
+}
+
+div.resumeSectionContent div.details {
+	margin-top:2px;
+}
+
+div.resumeSectionContent div.subpoints ul {
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+	/*margin-left: 1.2em;*/
+}
+
+div.resumeSectionContent div.subpoints li {
+	background-image: url(../../images/itemDot.gif);
+	background-repeat:no-repeat;
+	background-position: 0.2em .45em;
+	padding-left: 2.0em;
+	margin-top:4px;
+}
+
+div.resumeSectionContent .company .details {
+	margin-bottom:6px;
+}
+
+div.resumeSectionContent .company .position {
+	margin-bottom:12px;
+}
+
+div.resumeSectionContent .company {
+	margin-bottom:30px;
+}
+
+div#resumeFooter {
+	text-align:center;
+}

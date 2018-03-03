@@ -1,0 +1,51 @@
+@()
+
+<script type="text/javascript" src="@routes.Assets.versioned("javascripts/swfobject.js")"></script>
+<script type="text/javascript">
+	swfobject.registerObject("myFlashContent", "9.0.0", "@routes.Assets.versioned("flash/expressInstall.swf")");
+</script>
+
+<div class="paragraph">
+	This is a flash game I created with another student as our final project for a class in 2D animation during the Fall of 2007.  From the beginning, we had big ambitions.  The class focused on animation, but we wanted to create a piece that was highly interactive as well.  Our enthusiasm helped us cover the extra ground, but we continually realized how much work we had cut out for ourselves.  We reprioritized and redesigned our approach multiple times in order to finish the game on time.  But our long hours and perseverance paid off when it all came together into something that felt professional and was fun to play.
+</div>
+<div class="centerMe" id="samuraiFlashContainer">
+	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="550" height="400" id="myFlashContent" align="middle">
+		<param name="movie" value="@routes.Assets.versioned("flash/Samurai.swf")" />
+		<param name="quality" value="high" />
+		<param name="allowfullscreen" value="false" />
+		<param name="allowscriptaccess" value="sameDomain" />
+		<param name="flashvars" value="gameURL=@routes.Assets.versioned("flash/Game.swf")&amp;introURL=@routes.Assets.versioned("flash/IntroControls.swf")" />
+		<!--[if !IE]>-->
+		<object type="application/x-shockwave-flash" data="@routes.Assets.versioned("flash/Samurai.swf")" width="550" height="400" align="middle">
+			<param name="quality" value="high" />
+			<param name="allowfullscreen" value="false" />
+			<param name="allowscriptaccess" value="sameDomain" />
+			<param name="flashvars" value="gameURL=@routes.Assets.versioned("flash/Game.swf")&amp;introURL=@routes.Assets.versioned("flash/IntroControls.swf")" />
+		<!--<![endif]-->
+			<a href="http://www.adobe.com/go/getflashplayer">
+				<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+			</a>
+		<!--[if !IE]>-->
+		</object>
+		<!--<![endif]-->
+	</object>
+</div>
+<div id="samuraiControls" class="paragraph">
+	<div>Move the samurai with &larr;, &uarr;, and &rarr;</div>
+	<div>Use 'c' for a fast attack</div>
+	<div>Use 'z' for a strong attack</div>
+</div>
+<div class="lastParagraph">My partner and I took complementary roles on this project.  He handled most of the artistic side by designing the introduction animation and creating background art pieces for the game.  I tackled the technical aspects of the project by:
+    <ul>
+    	<li>Building a 2D game engine in ActionScript.  This engine handled:</li>
+        <ul>
+        	<li>Screen Scrolling: adding and removing background objects as the samurai moves throughout the stage</li>
+            <li>User Interaction Components: user input, the timer, and the kill count</li>
+            <li>Collision Detection and Response</li>
+            <li>Gravity</li>
+			<li>Building the Environment: based on data read in</li>
+        </ul>
+        <li>Programming the zombies so they respond to the samurai's movements and his attacks.</li>
+        <li>Animating the samurai and the zombies and writing code to handle the animations according to the state of the game.</li>
+    </ul>
+</div>

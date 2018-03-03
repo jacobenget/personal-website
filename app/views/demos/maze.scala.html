@@ -1,0 +1,69 @@
+@()
+
+@imageFolder = @{ "images/demos/3DMaze" }
+
+<div class="paragraph">
+    <div class="mazeDescriptionStep">
+		In 2012 (after fighting with Win32/MFC for far too long while working on tools at id Software) I had a bit of a crush on <a href="http://qt.nokia.com/products/">Qt</a>, Nokia's cross-platform application framework, and decided to revisit an old school project.  The assignment (from a computer graphics class I took in 2007) was to create two C++/OpenGL programs from scratch: one that could display a model of a 3D maze, and another that would let the user walk around in the same 3D model.  I also added collision detection and reaction, with the ability to jump and adjust the field of view while in first-person view.
+		<br/><br/>Porting the GUI code to Qt made it quite easy to combine all the tools into one application and simplify the maze creation process overall. Now the user can see the results in real-time while editing the maze and quickly get a first-person preview.  At the <a class="boldMe" href="#links">bottom</a> of this page I've included links to the source code for this project.  Here is a screenshot of the application after the Qt conversion:
+	</div>
+    <div style="text-align: center">
+        <img src="@routes.Assets.versioned(imageFolder + "/3DMaze_afterQt.jpg")"/>
+    </div>
+</div>
+<div class="paragraph">
+    <div class="mazeDescriptionStep">
+        To use this application to design and explore a 3D maze, you would first draw the maze in its flat 2D representation in the left pane as I've demonstrated here:
+    </div>
+    <div class="imageRow">
+        <img class="maze" src="@routes.Assets.versioned(imageFolder + "/2Dmaze0.gif")"/><img class="maze" src="@routes.Assets.versioned(imageFolder + "/2Dmaze1.gif")"/><img class="maze" src="@routes.Assets.versioned(imageFolder + "/2Dmaze2.gif")"/><img class="maze lastOfRow" src="@routes.Assets.versioned(imageFolder + "/2Dmaze3.gif")"/>
+    </div>
+    <div class="mazeDescriptionStep">
+		As the maze is edited a 3D version of the maze is shown in the right pane.  The width and height of the walls of the 3D maze can be adjusted using the sliders at the top of the application and through menu options the textures used for the floor and walls of the 3D maze can be changed:
+    </div>
+    <div class="imageRow">
+        <img class="maze" src="@routes.Assets.versioned(imageFolder + "/viewRegular.jpg")"/><img class="maze" src="@routes.Assets.versioned(imageFolder + "/viewAlienWalls.jpg")"/><img class="maze" src="@routes.Assets.versioned(imageFolder + "/viewGrassWalls.jpg")"/><img class="maze lastOfRow" src="@routes.Assets.versioned(imageFolder + "/viewStainWalls.jpg")"/>
+    </div>
+    <div class="mazeDescriptionStep">
+        The maze in the 3D view can be rotated, translated, and scaled and the camera angle can be distorted:
+    </div>
+    <div class="imageRow">
+        <img class="maze" src="@routes.Assets.versioned(imageFolder + "/viewCloseUp.jpg")"/><img class="maze" src="@routes.Assets.versioned(imageFolder + "/viewTwisted.jpg")"/><img class="maze" src="@routes.Assets.versioned(imageFolder + "/viewUpsideDown.jpg")"/><img class="maze lastOfRow" src="@routes.Assets.versioned(imageFolder + "/viewVerySmall.jpg")"/>
+    </div>
+    <div class="mazeDescriptionStep">
+        Selecting the menu option 'View|Explore Maze In First Person' will open a dialog that lets you step inside the maze in a first person fashion.  The custom textures are appled in this mode as well:
+    </div>
+    <div class="imageRow">
+        <img class="maze" src="@routes.Assets.versioned(imageFolder + "/enterRegular.jpg")"/><img class="maze" src="@routes.Assets.versioned(imageFolder + "/enterAlienWalls.jpg")"/><img class="maze" src="@routes.Assets.versioned(imageFolder + "/enterGrassWalls.jpg")"/><img class="maze lastOfRow" src="@routes.Assets.versioned(imageFolder + "/enterStainWalls.jpg")"/>
+    </div>
+    <div class="mazeDescriptionStep">
+        And while in first person view, you can move around the maze (within the boundaries of the walls), jump, and distort your field of view:
+    </div>
+    <div class="imageRow">
+        <img class="maze" src="@routes.Assets.versioned(imageFolder + "/exploreFisheye1.jpg")"/><img class="maze" src="@routes.Assets.versioned(imageFolder + "/exploreJump.jpg")"/><img class="maze" src="@routes.Assets.versioned(imageFolder + "/exploreFisheye2.jpg")"/><img class="maze lastOfRow" src="@routes.Assets.versioned(imageFolder + "/exploreFisheye3.jpg")"/>
+    </div>
+</div>
+<div class="paragraph">
+	While working on this project I gained experience in:
+    <ul>
+    	<li>Understanding how Qt can empower a developer through:
+        	<ul>
+            	<li>Signals and Slots</li>
+            	<li>Widget Layouts</li>
+            	<li>Actions which are interface agnostic</li>
+            </ul></li>
+    	<li>Understanding how OpenGL handles:
+        	<ul>
+            	<li>3D transformations</li>
+            	<li>Camera and viewing angles, clipping planes</li>
+            	<li>Drawing textures</li>
+            </ul></li>
+        <li>User interaction in a 3D environment: how to translate user actions into changes in the environment that make sense to the user.</li>
+        <li>Collision Detection and Reaction: you can't pass through the walls, and you are pushed along that wall when you approach it from an angle.</li>
+    </ul>
+</div>
+<div class="lastParagraph">
+	<a name="links"></a>
+	The source code I wrote for this project is being hosted at Google Code and can be found at <a class="boldMe" href="http://code.google.com/p/3dmaze/">www.code.google.com/p/3dmaze/</a>.  On that site you can <a class="boldMe" href="http://code.google.com/p/3dmaze/source/browse/#svn/trunk">browse</a> the source code, <a class="boldMe" href="http://code.google.com/p/3dmaze/downloads/list">download</a> the source code, and <a class="boldMe" href="http://code.google.com/p/3dmaze/wiki/documentation">view documentation</a> on how to build and use this application yourself.
+</div>
+

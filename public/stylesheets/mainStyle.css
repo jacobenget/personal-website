@@ -1,0 +1,294 @@
+/*
+In porting this .css to be served up by Play! I didn't find an easy way to generate it
+through a template (or how to use LESS to generate CSS), so instead all the intended variables are inlined :(
+
+<? Header ("Content-type: text/css");?>
+<? include("../scripts/colors.php"); ?>
+
+	$button1Color = '#003366';
+	$button2Color = '#001144';
+	$button3Color = '#446677';
+	$button4Color = '#114466';
+
+<? include("../scripts/setUpFormatting.php"); ?>
+
+	$headerHeight = 130;
+	$mainBodyHeight = 600;
+	$footerHeight = 120;
+	
+	$totalWidth = 900;
+	$menuWidth = 172;
+	$contentWidth = $totalWidth - $menuWidth;
+	
+	$contentBorderWidth = 1;
+	
+	$contentIncludeWidth = $contentWidth - ( 2 * $contentBorderWidth );
+	
+	$buttonInsideMargin = '10px';
+	
+	$smallFontSize = '10px';
+	$mediumFontSize = '18px';
+	$largeFontSize = '36px';
+	
+	
+	$greyTextColor = '#222222';
+	/*$greyTextColor = '#333333';*/
+	$lighterGreyTextColor = '#444444';
+	
+	$buttonPaddingBottom = 6;
+	$buttonPaddingRight = 10;
+	$buttonHeight = 50;
+	$fullButtonHeight = $buttonHeight + (2 * $buttonPadding);
+	
+<? include("../scripts/setUpFonts.php"); ?>
+
+	$largeButtonSmallFontSize = 12;
+	$largeButtonLargeFontSize = 18;
+	
+	$smallButtonSmallFontSize = 10;
+	$smallButtonLargeFontSize = 14;
+*/
+	
+/* @charset "UTF-8"; */ /*don't think there are non-ASCII characters in this css file to facilitate this manually marking or encoding*/
+/* <style> */
+/* CSS Document */
+
+html {
+	height:100%;
+}
+
+body {
+	height:100%; 
+	margin: 0; 
+	padding: 0; 
+	background-color:#FFFFFF; 
+	font-size:12px; 
+	color:#222222; /*<? echo "$greyTextColor";?>;*/
+	font-family:Verdana, Arial;
+	text-align: center;
+	font-family:Geneva, Arial, Helvetica, sans-serif;
+}
+
+img {
+	border:none;
+}
+
+a {
+	cursor:pointer;
+	text-decoration:none;
+	color:#222222 /*<? echo "$greyTextColor";?>;*/
+	/*font-weight:bold;*/
+}
+
+html .gainLayout {
+	height:1%;
+}
+
+/****************************************/
+
+div#container {
+	width:900px; /*<? echo "$totalWidth";?>px;*/
+	/*background-color:#FFFFFF;*/
+	margin:0 auto;
+	text-align: left;
+	/*height:700px;*/
+}
+
+/****************************************/
+
+div#header {
+	/*width:100%;*/
+	/*background-color:#CCCCCC;*/
+	height:130px; /*<? echo "$headerHeight"; ?>px*/
+}
+
+div#mainBody {
+	/*height:<? echo "$mainBodyHeight"; ?>px;*/
+	/*height:auto;*/
+	/*overflow: auto;*/
+	/*width:100%;*/
+}
+
+div#footer {
+	height:120px; /*<? echo "$footerHeight"; ?>px;*/
+	/*vertical-align: bottom;*/
+}
+
+/****************************************/
+
+div#headerContent {
+	/*margin:3px;*/
+	/*padding-right:5px;*/
+}
+
+div#topBar {
+	text-align:right;
+	font-size:10px;/*<? echo "$smallFontSize"; ?>;*/
+	/*font-family:"Courier New", Courier, monospace;*/
+	margin-top:5px;
+}
+
+div#topBar span {
+	padding-top:1px;
+	padding-bottom:1px;
+}
+
+div#topBar span#leftSide {
+	border-right: 1px solid;
+	margin-right:7px;
+	padding-right:7px;
+}
+
+img#mainTitleImage {
+	position:relative;
+	left:-1px;
+}
+
+
+div#header div#mainTitle {
+	margin-top:25px;
+}
+
+/*
+div#header img#mainTitleImage {
+	width:451px;
+	height:43px;
+}
+*/
+
+/*
+div#header span#title {
+	font-size:<? echo "$largeFontSize"; ?>;
+	color:<? echo "$lighterGreyTextColor"; ?>;
+	border-right: 2px solid;
+	padding-right:17px;
+	margin-right:17px;
+}
+
+div#header span#title span#titleText {
+	position:relative;
+	bottom:4px;
+	color:#1B375F;
+}
+
+div#header span#subTitle {
+	font-size:<? echo "$mediumFontSize"; ?>;
+	color:<? echo "$lighterGreyTextColor"; ?>;
+	position:relative;
+	bottom:8px;
+}
+*/
+
+/****************************************/
+
+div#menu {
+	float:left;
+	width:172px;/*<? echo "$menuWidth";?>px;*/
+}
+
+div#content {
+	float:left;
+	width:728px;/*<? echo "$contentWidth";?>px;*/
+	/*height:600px;*/
+}
+
+div#contentBody {
+	border: 1px/*<? echo "$contentBorderWidth"; ?>px*/ solid #222222; /*<? echo "$greyTextColor";?>;*/
+	height:100%;
+}
+
+div#contentInclude {
+	/*height:400px;*/
+	overflow:auto;
+	/*padding:8px;*/
+}
+
+/*********************************/
+
+div.buttonContainer {
+	padding-bottom:6px; /*<? echo "$buttonPaddingBottom";?>px;*/
+	padding-right:10px;/*<? echo "$buttonPaddingRight";?>px;*/
+	height:50px;/*<? echo "$buttonHeight";?>px;*/
+}
+
+span.mainButtonAnimate {
+	font-size:12px;/*<? echo "$largeButtonSmallFontSize"; ?>px;*/
+}
+
+
+span.mainButtonDontAnimate {
+	font-size:18px;/*<? echo "$largeButtonLargeFontSize"; ?>px;*/
+}
+
+a.boldMe:hover {
+	color:#000000;
+}
+
+a.alreadyBold {
+	/*color:#000000;*/
+	font-weight:bold;
+}
+
+a.increaseTextSize:hover span.mainButtonAnimate {
+	font-size:18px; /*<? echo "$largeButtonLargeFontSize"; ?>px;*/
+}
+
+span.buttonBody {
+	display:block;
+	/*width:100%;*/
+	height:50px; /*<? echo "$buttonHeight";?>px;*/
+	line-height:50px; /*<? echo "$buttonHeight";?>px;*/
+	text-align:right;
+	/*opacity:1.0;*/
+	/*height:100%;*/
+}
+
+span.buttonContents {
+	vertical-align:middle;
+	color:#FFFFFF;
+	margin-right:10px;
+}
+
+/*
+	$button1Color = '#003366';
+	$button2Color = '#001144';
+	$button3Color = '#446677';
+	$button4Color = '#114466';
+*/
+	
+span#button1 {
+	background-color: #003366; /*<? echo "$button1Color"; ?>*/
+}
+
+span#button2 {
+	background-color: #001144; /*<? echo "$button2Color"; ?>*/
+}
+
+span#button3 {
+	background-color: #446677; /*<? echo "$button3Color"; ?>*/ /*favorite green: 407629*/ 
+}
+
+span#button4 {
+	background-color: #114466; /*<? echo "$button4Color"; ?>*/
+}
+
+img.largeArrow {
+	width:10px;
+	height:10px;
+	position:relative;
+	right:10px;
+}
+
+img.largeArrowIE6 {
+	padding-top:20px;
+}
+
+div#footerContents {
+	text-align: center;
+	vertical-align: bottom;
+}
+
+/* </style> */
+
+
+

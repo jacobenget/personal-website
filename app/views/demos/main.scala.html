@@ -1,0 +1,101 @@
+@(demo: Demo)
+
+@demoList = @{ List(
+	(DoomWadReader(),
+		"doom asset viewer",
+		"online doom WAD reader",
+		"doomWadReader",
+		() => demos.doomWadReader()),
+	(Maze(),
+		"3D maze creator",
+		"software to design + explore a 3D maze",
+		"3DMaze",
+		() => demos.maze()),
+	(Samurai(),
+		"stick-figure half-demon samurai",
+		"a 2D flash side-scrolling game",
+		"samurai",
+		() => demos.samurai()),
+	(Cycle3467(),
+		"cycle 3467",
+		"a 3D animation created with Maya",
+		"cycle3467",
+		() => demos.cycle3467()),
+	(Extras(),
+		"extras",
+		"small projects of interest",
+		"extras",
+		() => demos.extras())
+	)
+}
+
+@previous[T](list: List[T], elem: T) = @{
+	val pairedWithNext = (list.last :: list).sliding(2)
+	pairedWithNext.collectFirst({case List(item, next) if (next == elem) => item})
+}
+
+@next[T](list: List[T], elem: T) = @{
+	val pairedWithNext = (list.last :: list).sliding(2)
+	pairedWithNext.collectFirst({case List(item, next) if (item == elem) => next})
+}
+
+@nextDemo(demo: Demo) = @{
+	var strippedToJustDemo = demoList map(_._1)
+	next(strippedToJustDemo, demo)
+}
+
+@previousDemo(demo: Demo) = @{
+	var strippedToJustDemo = demoList map(_._1)
+	previous(strippedToJustDemo, demo)
+}
+
+@buttonToPreviousDemo(demo: Demo) = {
+	<span class="previousLink"><a class="boldMe dontUnderlineMe" href="@Page.link(Demos(previousDemo(demo).get))">&lt; previous</a></span>
+}
+
+@buttonToNextDemo(demo: Demo) = {
+	<span class="nextLink"><a  class="boldMe dontUnderlineMe" href="@Page.link(Demos(nextDemo(demo).get))">next &gt;</a></span>
+}
+
+@buttonToDemoHome() = {
+	<span class="demosHomeLink"><a class="boldMe dontUnderlineMe" href="@Page.link(Demos(Index()))">demos home</a></span>
+}
+
+@if(demo == Index()) {
+	<div id="thumbnailTable">
+	    <div id="demoTableHeader">
+	        <span>please click an image to view demo detail</span>
+	    </div>
+	    @for((demo, title, subTitle, assetFolder, _) <- demoList) { 
+			<div class="demoRow">
+		    	<a class="demoThumbnailLink" href="@Page.link(Demos(demo))">
+			        <span class="demoThumbnailRow">
+				        <img alt="" class="demoThumbnail slideIn" src="@routes.Assets.versioned("images/demos/" + assetFolder + "/thumbnail.jpg")"/>
+				        <span class="demoInfo">
+				        	<span class="demoTitle">@title</span><span class="demoDescription">@subTitle</span>
+				        </span>
+			        </span>
+		        </a>
+		    </div>
+	    }
+	</div>
+} else {
+	@defining(demoList find(_._1 == demo) get) { demoEntry => @demoEntry match { case (_, title, subTitle, assetFolder, content) =>
+		<div id="demoDetailWrapper" class="gainLayout">
+			<div class="navigationBar" id="demoTopBar">
+		    	@buttonToPreviousDemo(demo)@buttonToNextDemo(demo)
+		    </div>
+		    <div id="demoTitleBar">
+		        <img alt="" id="headerThumbnail" src="@routes.Assets.versioned("images/demos/" + assetFolder + "/thumbnail.jpg")"/>
+		        <span id="entireDemoTitle"><span class="demoTitle">@title</span><span class="demoDescription">@subTitle</span></span>
+		    </div>
+		    <div id="demoIncludeContents">
+		    	@content()
+		    </div>
+			<div class="navigationBar" id="demoBottomBar">
+		    	@buttonToPreviousDemo(demo)@buttonToDemoHome()@buttonToNextDemo(demo)
+		    </div>
+		</div>
+		}
+	}
+}
